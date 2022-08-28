@@ -10,7 +10,7 @@ jobs:
   analyze:
     env:
       # Path to the CMake build directory.
-      CONFIG_DIR: '${{ github.workspace }}/build/${{ matrix.cmake_preset }}'
+      CONFIG_DIR: '${{ github.workspace }}/out/${{ matrix.cmake_preset }}'
 
     permissions:
       contents: read         # for actions/checkout to fetch code
