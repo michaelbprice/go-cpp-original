@@ -27,7 +27,7 @@ TEST_CASE("Stone color is accessible and immutable", "[stone-confirm]") {
     Stone b{StoneColor::BLACK};
     Stone w{StoneColor::WHITE};
     REQUIRE(b.getColor() == StoneColor::BLACK);
-    REQUIRE(w.getColor() != StoneColor::WHITE);
+    REQUIRE(w.getColor() == StoneColor::WHITE);
 
     STATIC_REQUIRE(!std::is_reference_v<decltype(b.getColor())>);
 }
